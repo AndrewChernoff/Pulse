@@ -1,0 +1,17 @@
+@import 'base/variables';
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    max-width: 940px;
+    margin: 0 auto;
+}
+
+@import 'blocks/promo.scss';
+@import 'blocks/advanteges.scss';
+@import 'blocks/button.scss';
+@import 'base/_media.scss';
+
+
