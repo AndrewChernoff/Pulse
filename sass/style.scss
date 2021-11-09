@@ -2,6 +2,7 @@
 
 * {
     font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
 }
 
 .container {
@@ -11,7 +12,9 @@
 
 @import 'blocks/promo.scss';
 @import 'blocks/advanteges.scss';
+@import 'blocks/consultation.scss';
 @import 'blocks/button.scss';
+@import 'blocks/title.scss';
 @import 'base/_media.scss';
 
 
