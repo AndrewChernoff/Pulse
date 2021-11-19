@@ -11,6 +11,7 @@
         font-size: 13px;
     }
     }
+
 }
 
 @media (max-width: 991px) {
@@ -43,7 +44,7 @@
         input {
         &:nth-child(1) {
         margin: 30px 0 0 0;
-        }///
+        }
     }
     .title {
         &__left{
@@ -51,7 +52,11 @@
         }
     }
     }
-    
+
+    /* .slick {
+        min-height: 700px;
+        padding: 50px 0;
+    } */
 } 
 
 @media (max-width: 767px) {
@@ -144,7 +149,10 @@
         }
     }
 
-    
+    /* .slick {
+        min-height: 676px;
+        padding: 40px 0;
+    } */
 } 
 
 @media (max-width: 575px) {
@@ -260,4 +268,8 @@
             }
         }
     }
+    /* .slick {
+        min-height: 415px;
+        padding: 20px 0;
+    } */
 }
