@@ -1,15 +1,14 @@
 .slick {
     min-height: 742px;
-    padding: 108px 0;
-    position: relative;
+    padding: 108px 0 54px 0;
+    .container {
+        position: relative;
+    }
     &__slider {
         margin: 0 auto;
-        max-width: 750px;
-        /* img {
-            max-width: 100%;
-        } */
     }
-    .slick-prev, .slick-next  {
+    .prev, .next  {
+        position: absolute;
         background-color: white;
         position: absolute;
         top: 50%;
@@ -18,10 +17,17 @@
         border: none;
     }
 
-    .slick-next {
+    .next {
         right: -110px;
         left: auto;
         top: 50%;
+    }
+
+    .tns-item {
+        img {
+        display: block;
+        margin: 0 auto;
+       }
     }
 /* 
     .slick__slider {

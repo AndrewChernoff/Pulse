@@ -37,4 +37,11 @@
         text-transform: uppercase;
         color: #FFFFFF;
     }
+    &__catalog-item {
+        color: white;
+        width: 135px;
+        height: 44px;
+        border-radius: 3px;
+        background: $main_color;
+    }
 }

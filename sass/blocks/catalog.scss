@@ -1,0 +1,87 @@
+.catalog {
+    padding: 54px 0 40px 0;
+    &__title {
+        font-size: 30px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    &-item {
+        width: 303px;
+        min-height: 442px;
+        border: 2px solid #E8E8E8;
+        img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+        }
+        &__title {
+            margin: 15px 0;
+            font-weight: bold;
+            font-size: 16px;
+            text-align: center;
+        }
+        &__descr {
+            font-weight: 300;
+            font-size: 14px;
+            text-align: center;
+            width: 250px;
+            min-height: 41px;
+            margin: 0 auto;
+        }
+        &__link {
+            display: table;
+            font-weight: 500;
+            font-size: 14px;
+            text-decoration-line: underline;
+            color: #C70101;
+            margin: 0 auto;
+            margin-top: 10px;
+            margin-bottom: 17px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        &__footer {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 27px;
+        }
+        &__old-price {
+            font-style: normal;
+            font-weight: 300;
+            font-size: 14px;
+            text-decoration-line: line-through;
+            color: #555555;
+        }
+        &__price {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 20px;
+        }
+    }
+    &__tabs {
+        display: flex;
+        justify-content: center;
+        margin: 45px 0 57px 0;
+    }
+    &__tab {
+        border: grey 1px solid;
+        width: 223px;
+        height: 52px;
+        line-height: 50px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #6B6B6B;
+        transform: skewX(-25deg);
+        margin-right: 10px;
+        div{
+            transform: skewX(25deg);
+        }
+        &:hover {
+            background-color: $main_color;
+            border: none;
+            color: white;
+            transition:  color 1s, background-color 1s;
+        }
+    }
+}
