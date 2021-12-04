@@ -86,7 +86,7 @@
         margin-right: 10px;
 
         &__inactive {
-            border: grey 1px solid;//
+            border: grey 1px solid;
             width: 223px;
             height: 52px;
             line-height: 50px;
@@ -94,7 +94,7 @@
             text-transform: uppercase;
             color: #6B6B6B;
             transform: skewX(-25deg);
-            margin-right: 10px;//
+            margin-right: 10px;
             div {
                 transform: skewX(25deg);
             }
@@ -110,9 +110,9 @@
         }
     }
     &-items {
-        display: none; ///&-items__active
+        display: none;
         &__active {
-            display: flex; ///&-items
+            display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
         &__show {

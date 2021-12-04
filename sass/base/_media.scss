@@ -12,6 +12,27 @@
     }
     }
 
+    .slick {
+        min-height: 700px;
+        .tns-item img {
+            display: block;
+            max-width: 70%;
+        }
+        .prev {
+            top: 38%;
+            left: -50px;
+        }
+        .next {
+            right: -50px;
+            top: 38%;
+        }
+    }
+
+    .catalog-items {
+        &__active {
+            justify-content: space-around;
+        }
+    }
 }
 
 @media (max-width: 991px) {
@@ -53,9 +74,30 @@
     }
     }
 
-    /* .slick {
-        min-height: 700px;
-        padding: 50px 0;
+    .slick {
+        min-height: 650px;
+        .tns-item img {
+            display: block;
+            max-width: 60%;
+        }
+        .prev {
+            top: 38%;
+            left: -10px;
+            &__img {
+                max-width: 60%;
+            }
+        }
+        .next {
+            right: -10px;
+            top: 38%;
+            &__img {
+                max-width: 60%;
+            }
+        }
+    }
+    /* .catalog {
+        padding-left: 23%;
+     
     } */
 } 
 
@@ -149,10 +191,9 @@
         }
     }
 
-    /* .slick {
-        min-height: 676px;
-        padding: 40px 0;
-    } */
+     .slick {
+        min-height: 500px;
+    } 
 } 
 
 @media (max-width: 575px) {
@@ -200,8 +241,7 @@
     }
     .visible {
         display: block;
-    }
-   
+    }  
 }
 
 .button {
@@ -223,7 +263,8 @@
             font-size: 15px;
         }
     }
-    }
+ }
+
 
     .advanteges {
         padding: 40px 0 20px 0;
@@ -249,8 +290,8 @@
         }
         &__subtitle {
             font-size: 10px;
-            text-align: center;        }
-        
+            text-align: center;   
+        }
         &__form {
             margin: 20px 0 0 0;
             align-items: center;
@@ -268,8 +309,49 @@
             }
         }
     }
-    /* .slick {
-        min-height: 415px;
-        padding: 20px 0;
-    } */
+
+     .slick {
+        min-height: 300px;
+        .tns-item img {
+            display: block;
+            max-width: 60%;
+        }
+        .prev {
+            top: 38%;
+            left: -10px;
+            &__img {
+                max-width: 60%;
+            }
+        }
+        .next {
+            right: -10px;
+            top: 38%;
+            &__img {
+                max-width: 60%;
+            }
+        }
+    }
+    .catalog {
+        &__title {
+            font-size: 22px;
+        }
+        &__tabs {
+            flex-direction: column;
+            margin-left: 38px;
+            margin-top: 25px;
+            margin-bottom: 30px;
+        }
+        &__tab {
+            margin-top: 10px;
+            width: 218px;
+            height: 47px;
+        }
+        &__tab__inactive {
+            margin-top: 10px;
+            width: 218px;
+            height: 47px;
+        }
+    }
 }
+
+
