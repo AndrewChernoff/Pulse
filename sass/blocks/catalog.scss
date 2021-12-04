@@ -74,26 +74,27 @@
         margin: 45px 0 57px 0;
     }
     &__tab {
+        background-color: $main_color;
         border: grey 1px solid;
         width: 223px;
         height: 52px;
         line-height: 50px;
         text-align: center;
         text-transform: uppercase;
-        color: #6B6B6B;
+        color: white;
         transform: skewX(-25deg);
         margin-right: 10px;
-        &__active {
-            background-color: $main_color;
-            border: grey 1px solid;
+
+        &__inactive {
+            border: grey 1px solid;//
             width: 223px;
             height: 52px;
             line-height: 50px;
             text-align: center;
             text-transform: uppercase;
-            color: white;
+            color: #6B6B6B;
             transform: skewX(-25deg);
-            margin-right: 10px;
+            margin-right: 10px;//
             div {
                 transform: skewX(25deg);
             }
@@ -114,7 +115,12 @@
             display: flex; ///&-items
             flex-wrap: wrap;
             justify-content: space-between;
-            border: red 1px solid;
+        &__show {
+            display: block;
+        }
+        &__notshow {
+            display: none;
+        }
         }
     &__wrapper {
         display: flex;
@@ -196,4 +202,8 @@
         &:hover {
             color: #C70101;
         }
+    }
+
+    .catalog-items__notshow {
+        display: none;
     }

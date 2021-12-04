@@ -72,25 +72,39 @@ back.forEach((b, i) => {
 })
 
 
-let catalogTab = document.querySelectorAll('.catalog__tab');//
-let catalogItems = document.querySelectorAll('.catalog-items__active');//catalog-items__active
-
+/* let catalogTab = document.querySelectorAll('.catalog__tab');//
+let catalogItems = document.querySelectorAll('.catalog-items__active');//catalog-items__active */
+/* let showTab = document.querySelectorAll('.catalog-items__show');
+let hideTab = document.querySelectorAll('.catalog-items__notshow');
+ */
 function openCity(evt, tabId) {
-    var i, catalogItems, catalogTab;
-    catalogItems = document.getElementsByClassName("catalog-items");
+    let i, catalogItems, catalogTab;
+    catalogItems = document.getElementsByClassName("catalog-items__show");
     for (i = 0; i < catalogItems.length; i++) {
-        catalogItems[i].style.display = "none";
-        //catalogItems[i].className = "catalog-items";
-    }
-    catalogTab = document.querySelectorAll(".catalog__tab");
-    for (i = 0; i < catalogTab.length; i++) {
-        catalogTab[i].className = catalogTab[i].className.replace(" active", "");
-    }
-    document.getElementById(tabId).style.display = "flex";
-    //document.getElementById(tabId).className = "catalog-items__active";
+        catalogItems[i].className = "catalog-items__notshow";
+        catalogTab = document.querySelectorAll(".catalog__tab");
 
+        for (i = 0; i < catalogTab.length; i++) {
+            catalogTab[i].className = "catalog__tab__inactive";
+        }
+    }
+    /* catalogTab = document.querySelectorAll(".catalog__tab");
+    for (i = 0; i < catalogTab.length; i++) {
+        catalogTab[i].className = catalogTab[i].className.replace(" active", ""); //catalog__tab__active
+    } */
+
+    document.getElementById(tabId).className = "catalog-items__show";
     evt.currentTarget.className = "catalog__tab";
 }
+
+
+
+
+
+
+
+
+
 
 /* $(document).ready(function () {
 
