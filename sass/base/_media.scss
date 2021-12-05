@@ -113,8 +113,8 @@
             img {
             min-width: 80%;
         }
-    }
-    }
+      }
+     }
     }
 } 
 
@@ -227,7 +227,18 @@
         }
     }
     }
-    } //////320px left
+    }
+
+    .footer {
+        &__info {
+            width: 420px;
+            height: 230px;
+        }
+        &__info__socialmedias a {
+            width: 42px;
+            height: 42px;
+        }
+    }
 } 
 
 @media (max-width: 575px) {
@@ -298,8 +309,6 @@
         }
     }
  }
-
-
     .advanteges {
         padding: 40px 0 20px 0;
         &__header {
@@ -386,6 +395,31 @@
             height: 47px;
         }
     }
-}
+
+    .reviews {
+        &__title {
+            font-size: 25px;
+        }
+        &__client {
+                &__fullName {
+                    text-align: center;
+                    margin-top: 10px;
+        }
+    }
+    }
+
+    .footer {
+        &__info {
+            width: 320px;
+            height: 200px;
+        }
+        &__info__socialmedias a {
+            width: 32px;
+            height: 32px;
+        }
+    }
+} 
+    
+
 
 
