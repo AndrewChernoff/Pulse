@@ -1,0 +1,30 @@
+.reviews {
+    min-height: 970px;
+    padding: 40px 0 50px 0;
+    &__title {
+        font-weight: bold;
+        font-size: 30px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    &__client {
+        display: flex;
+        justify-content: space-between;
+        margin: 60px 0 0 0;
+        &__fullName {
+            font-weight: bold;
+            font-size: 18px;
+        }
+        &__marathons {
+            font-weight: 500;
+            font-size: 14px;
+            color: #646464;
+            margin: 0 0 10px 0;
+        }
+        &__info {
+            font-weight: 300;
+            font-size: 16px;
+            max-width: 680px;
+        }
+    }
+}

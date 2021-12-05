@@ -87,29 +87,3 @@ function switchTab(evt, tabId) {
     evt.currentTarget.className = "catalog__tab";
 }
 
-
-
-
-
-
-
-
-
-
-/* $(document).ready(function () {
-
-    $('.catalog__tabs catalog__tab').click(function (event) {
-        event.preventDefault();
-
-        // Toggle active class on tab buttons
-        $(this).parent().addClass("catalog__tab__active");
-        $(this).parent().siblings().removeClass("catalog__tab__active");
-
-        // display only active tab content
-        var activeTab = $(this).attr("href");
-        $('.catalog-items').not(activeTab).css("display", "none");
-        $(activeTab).fadeIn();
-
-    });
-
-}); */
