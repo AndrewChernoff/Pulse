@@ -74,3 +74,53 @@ function switchTab(evt, tabId) {
     evt.currentTarget.className = "catalog__tab";
 }
 
+/////Modal
+let consultation = document.querySelectorAll("[data-consultation]");
+let consultMododal = document.querySelector("#consultation");
+let orderMododal = document.querySelector("#order");
+let overlay = document.querySelector(".overlay");
+const closeConsult = document.querySelector('#consultation .modal__close');
+const closeOrder = document.querySelector('#order .modal__close');
+const order = document.querySelectorAll(".button__catalog-item");
+
+//consultation
+consultation.forEach(el => {
+    el.addEventListener('click', function () {
+        overlay.style.display = 'block';
+        consultMododal.style.display = 'block';
+        document.body.style.overflow = 'hidden'
+    })
+})
+
+closeConsult.addEventListener('click', function () {
+    overlay.style.display = 'none';
+    consultMododal.style.display = 'none';
+    document.body.style.overflow = ''
+})
+
+//order
+let catalogItem = document.querySelectorAll(".catalog-item__title");
+
+order.forEach((el, i) => {
+    el.addEventListener('click', function () {
+        overlay.style.display = 'block';
+        orderMododal.style.display = 'block';
+        document.querySelector("#order .modal__subtitle").innerHTML = catalogItem[i].innerHTML;
+        document.body.style.overflow = 'hidden';
+    })
+})
+
+closeOrder.addEventListener('click', function (e) {
+    overlay.style.display = 'none';
+    orderMododal.style.display = 'none';
+    document.body.style.overflow = '';
+})
+
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+        overlay.style.display = 'none';
+        orderMododal.style.display = 'none';
+        document.body.style.overflow = '';
+    }
+})
+
