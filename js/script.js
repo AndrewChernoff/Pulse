@@ -117,10 +117,87 @@ closeOrder.addEventListener('click', function (e) {
 })
 
 document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape') {
+    if (event.key === 'Escape' && overlay.style.display === 'block') {
         overlay.style.display = 'none';
         orderMododal.style.display = 'none';
         document.body.style.overflow = '';
     }
 })
 
+$("#consultation form").validate({
+    rules: {
+        name: {
+            required: true,
+            minlength: 2
+        },
+        phone: "required",
+        minlength: 2,
+        email: {
+            required: true,
+            email: true
+        }
+    },
+    messages: {
+        phone: "Пожалуйста, введите ваш номер телефона",
+        email: {
+            required: "Пожалуйста, введите вашу почту",
+            email: "Неверно указана почта",
+        },
+        name: {
+            name: "Пожалуйста, введите ваше имя",
+            minlength: jQuery.validator.format("Введите {0} символов!")
+        }
+    }
+});
+
+$(".consultation form").validate({
+    rules: {
+        name: {
+            required: true,
+            minlength: 2
+        },
+        phone: "required",
+        minlength: 2,
+        email: {
+            required: true,
+            email: true
+        }
+    },
+    messages: {
+        phone: "Пожалуйста, введите ваш номер телефона",
+        email: {
+            required: "Пожалуйста, введите вашу почту",
+            email: "Неверно указана почта",
+        },
+        name: {
+            name: "Пожалуйста, введите ваше имя",
+            minlength: jQuery.validator.format("Введите {0} символов!")
+        }
+    }
+});
+
+$("#order form").validate({
+    rules: {
+        name: {
+            required: true,
+            minlength: 2
+        },
+        phone: "required",
+        minlength: 2,
+        email: {
+            required: true,
+            email: true
+        }
+    },
+    messages: {
+        phone: "Пожалуйста, введите ваш номер телефона",
+        email: {
+            required: "Пожалуйста, введите вашу почту",
+            email: "Неверно указана почта",
+        },
+        name: {
+            name: "Пожалуйста, введите ваше имя",
+            minlength: jQuery.validator.format("Введите {0} символов!")
+        }
+    }
+});

@@ -12,6 +12,14 @@
         flex-direction: column;
         align-items: flex-start;
         margin: 36px 0 0 0;
+        .error {
+            color: white;
+            border: red 2px solid;
+            margin: 5px 0 0 0;
+        }
+        #email-error, #phone-error, #name-error {
+            border: none;
+        }
     }
     input {
         width: 303px;
