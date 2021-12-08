@@ -4,7 +4,9 @@ const slider = tns({
     slideBy: 'page',
     autoplay: false,
     controls: false,
-    nav: false
+    nav: true
+
+
 });
 
 document.querySelector('.prev').onclick = function () {

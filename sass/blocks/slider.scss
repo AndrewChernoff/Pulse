@@ -1,5 +1,5 @@
 .slick {
-    min-height: 742px;
+    min-height: 820px;
     padding: 108px 0 54px 0;
     .container {
         position: relative;
@@ -32,5 +32,28 @@
     .tns-item img { 
         display:block;
         max-width:100%; 
+    }
+
+    .tns-outer {
+        position: relative;
+    }
+    .tns-nav {
+        position: absolute;
+        bottom: -15%;
+        left: 50%;
+        transform: translate(-50%, 10%);
+    }
+    .tns-nav {
+        display: flex;
+        justify-content: space-around;
+        width: 100px;
+        button {
+            width: 20px;
+            height: 20px;
+            border-radius: 100% ;
+        }
+        .tns-nav-active {
+            background: blue;
+        }
     }
 }

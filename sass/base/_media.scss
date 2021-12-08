@@ -88,18 +88,26 @@
             max-width: 60%;
         }
         .prev {
-            top: 38%;
+            display: none;
+            /* top: 38%;
             left: -10px;
             &__img {
                 max-width: 60%;
-            }
+            } */
         }
         .next {
-            right: -10px;
+            display: none;
+            /* right: -10px;
             top: 38%;
             &__img {
                 max-width: 60%;
-            }
+            } */
+        }
+
+        .tns-nav button {
+            width: 15px;
+            height: 15px;
+            border-radius: 100%;
         }
     }
     .reviews {
