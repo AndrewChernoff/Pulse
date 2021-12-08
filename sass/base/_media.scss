@@ -345,6 +345,9 @@
                     margin: 10px 0 0 0;
                     }
             }
+            .error {
+                font-size: 10px;
+            }
             .button__consultation {
                 font-size: 13px;
                 width: 220px;
@@ -358,6 +361,12 @@
         .tns-item img {
             display: block;
             max-width: 60%;
+        }
+        .next:hover {
+            border: none;
+        }
+        .prev:hover {
+            border: none;
         }
         .prev {
             top: 38%;
@@ -418,7 +427,47 @@
             height: 32px;
         }
     }
+
+    .overlay {
+        .modal {
+            width: 210px;
+            min-height: 330px;
+            padding: 10px 6px 5px 6px;
+            &__title {
+                font-size: 12px;
+            }
+            &__subtitle {
+                font-size: 12px;
+            }
+            &__close {
+                font-size: 40px;
+                top: -22px;
+                right: -32px;
+            }
+            form {
+                margin-top: 0;
+                input {
+                width: 160px;
+                height: 35px;
+                }
+                .error {
+                    font-size: 10px;
+                    text-align: center;
+                }
+                .button__consultation {
+                    font-size: 10px;
+                    width: 130px;
+                    height: 40px;
+                }
+            }
+        }
+        .modal#order {
+            min-height: 300px;
+        }
+    }
 } 
+
+
     
 
 

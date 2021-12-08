@@ -144,7 +144,7 @@ $("#consultation form").validate({
             email: "Неверно указана почта",
         },
         name: {
-            name: "Пожалуйста, введите ваше имя",
+            required: "Пожалуйста, введите ваше имя",
             minlength: jQuery.validator.format("Введите {0} символов!")
         }
     }
@@ -170,7 +170,7 @@ $(".consultation form").validate({
             email: "Неверно указана почта",
         },
         name: {
-            name: "Пожалуйста, введите ваше имя",
+            required: "Пожалуйста, введите ваше имя",
             minlength: jQuery.validator.format("Введите {0} символов!")
         }
     }
@@ -196,7 +196,7 @@ $("#order form").validate({
             email: "Неверно указана почта",
         },
         name: {
-            name: "Пожалуйста, введите ваше имя",
+            required: "Пожалуйста, введите ваше имя",
             minlength: jQuery.validator.format("Введите {0} символов!")
         }
     }
