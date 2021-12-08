@@ -5,8 +5,6 @@ const slider = tns({
     autoplay: false,
     controls: false,
     nav: true
-
-
 });
 
 document.querySelector('.prev').onclick = function () {
@@ -85,19 +83,26 @@ const closeConsult = document.querySelector('#consultation .modal__close');
 const closeOrder = document.querySelector('#order .modal__close');
 const order = document.querySelectorAll(".button__catalog-item");
 
+function showModal() {
+    overlay.style.display = 'block';
+    consultMododal.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+}
+
+function hideModal() {
+    overlay.style.display = 'none';
+    consultMododal.style.display = 'none';
+    document.body.style.overflow = '';
+}
 //consultation
 consultation.forEach(el => {
     el.addEventListener('click', function () {
-        overlay.style.display = 'block';
-        consultMododal.style.display = 'block';
-        document.body.style.overflow = 'hidden'
+        showModal();
     })
 })
 
 closeConsult.addEventListener('click', function () {
-    overlay.style.display = 'none';
-    consultMododal.style.display = 'none';
-    document.body.style.overflow = ''
+    hideModal();
 })
 
 //order
@@ -107,99 +112,50 @@ order.forEach((el, i) => {
     el.addEventListener('click', function () {
         overlay.style.display = 'block';
         orderMododal.style.display = 'block';
-        document.querySelector("#order .modal__subtitle").innerHTML = catalogItem[i].innerHTML;
         document.body.style.overflow = 'hidden';
+        document.querySelector("#order .modal__subtitle").innerHTML = catalogItem[i].innerHTML;
     })
 })
 
-closeOrder.addEventListener('click', function (e) {
-    overlay.style.display = 'none';
-    orderMododal.style.display = 'none';
-    document.body.style.overflow = '';
+closeOrder.addEventListener('click', function () {
+    hideModal();
 })
 
 document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape' && overlay.style.display === 'block') {
-        overlay.style.display = 'none';
-        orderMododal.style.display = 'none';
-        document.body.style.overflow = '';
+        hideModal();
     }
 })
 
-$("#consultation form").validate({
-    rules: {
-        name: {
-            required: true,
-            minlength: 2
+///Validation
+function validateForm(form) {
+    $(form).validate({
+        rules: {
+            name: {
+                required: true,
+                minlength: 2
+            },
+            phone: "required",
+            minlength: 2,
+            email: {
+                required: true,
+                email: true
+            }
         },
-        phone: "required",
-        minlength: 2,
-        email: {
-            required: true,
-            email: true
+        messages: {
+            phone: "Пожалуйста, введите ваш номер телефона",
+            email: {
+                required: "Пожалуйста, введите вашу почту",
+                email: "Неверно указана почта",
+            },
+            name: {
+                required: "Пожалуйста, введите ваше имя",
+                minlength: jQuery.validator.format("Введите {0} символов!")
+            }
         }
-    },
-    messages: {
-        phone: "Пожалуйста, введите ваш номер телефона",
-        email: {
-            required: "Пожалуйста, введите вашу почту",
-            email: "Неверно указана почта",
-        },
-        name: {
-            required: "Пожалуйста, введите ваше имя",
-            minlength: jQuery.validator.format("Введите {0} символов!")
-        }
-    }
-});
-
-$(".consultation form").validate({
-    rules: {
-        name: {
-            required: true,
-            minlength: 2
-        },
-        phone: "required",
-        minlength: 2,
-        email: {
-            required: true,
-            email: true
-        }
-    },
-    messages: {
-        phone: "Пожалуйста, введите ваш номер телефона",
-        email: {
-            required: "Пожалуйста, введите вашу почту",
-            email: "Неверно указана почта",
-        },
-        name: {
-            required: "Пожалуйста, введите ваше имя",
-            minlength: jQuery.validator.format("Введите {0} символов!")
-        }
-    }
-});
-
-$("#order form").validate({
-    rules: {
-        name: {
-            required: true,
-            minlength: 2
-        },
-        phone: "required",
-        minlength: 2,
-        email: {
-            required: true,
-            email: true
-        }
-    },
-    messages: {
-        phone: "Пожалуйста, введите ваш номер телефона",
-        email: {
-            required: "Пожалуйста, введите вашу почту",
-            email: "Неверно указана почта",
-        },
-        name: {
-            required: "Пожалуйста, введите ваше имя",
-            minlength: jQuery.validator.format("Введите {0} символов!")
-        }
-    }
-});
+    });
+}
+/// 3 validated forms
+validateForm("#consultation form");
+validateForm(".consultation form");
+validateForm("#order form");
