@@ -15,8 +15,6 @@ document.querySelector('.next').onclick = function () {
     slider.goTo('next');
 };
 
-
-
 let more = document.querySelectorAll('.catalog-item__link');
 let content = document.querySelectorAll('.catalog-items__content__active');
 let back = document.querySelectorAll('.catalog-item__back');
@@ -159,3 +157,38 @@ function validateForm(form) {
 validateForm("#consultation form");
 validateForm(".consultation form");
 validateForm("#order form");
+
+///forms 
+/* let element = document.querySelector("form[name='name']");
+element.innerHTML = '5';
+console.log(element); */
+
+$('input[name="phone"]').inputmask("+7(999) 999-99-99");
+
+/* const forms = document.getElementsByTagName('form'); */
+const forms = document.querySelectorAll('.consultation__form');
+
+forms.forEach(el => {
+    sendFormData(el);
+})
+
+function sendFormData(form) {
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        /* let formData = new FormData(form); */
+        const formData = {
+            name: form.name.value,
+            email: form.email.value,
+            phone: form.phone.value,
+        }
+        axios.post('mailer/smart.php', { formData })
+            .then(() => {
+                form.reset();
+            })
+            .catch(() => {
+                console.log('shit');
+                console.log(formData);
+            })
+    })
+}
