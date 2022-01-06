@@ -89,19 +89,9 @@
         }
         .prev {
             display: none;
-            /* top: 38%;
-            left: -10px;
-            &__img {
-                max-width: 60%;
-            } */
         }
         .next {
             display: none;
-            /* right: -10px;
-            top: 38%;
-            &__img {
-                max-width: 60%;
-            } */
         }
 
         .tns-nav button {
@@ -246,6 +236,13 @@
             width: 42px;
             height: 42px;
         }
+    }
+
+    .up {
+        max-width: 40px;
+        max-height: 40px;
+        bottom: 16%;
+        left: 90%;
     }
 } 
 
@@ -466,6 +463,13 @@
         .modal#order {
             min-height: 300px;
         }
+    }
+
+    .up {
+        max-width: 30px;
+        max-height: 30px;
+        bottom: 15%;
+        left: 85%;
     }
 } 
 
