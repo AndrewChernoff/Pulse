@@ -135,18 +135,18 @@
         <div class="container">
             <h2 class="catalog__title">каталог пульсометров</h2>
             <div class="catalog__tabs">
-                <div class="catalog__tab" onclick="switchTab(event, 'fitness')">
+                <div class="catalog__tab catalog__tab__active" data-tab>
                     <div> для фитнеса </div>
                 </div>
-                <div class="catalog__tab__inactive" onclick="switchTab(event, 'jogging')">
+                <div class="catalog__tab" data-tab>
                     <div> для бега </div>
                 </div>
-                <div class="catalog__tab__inactive" onclick="switchTab(event, 'triatlon')">
+                <div class="catalog__tab" data-tab>
                     <div> для триатлона </div>
                 </div>
             </div>
 
-            <div class="catalog-items__show" id="fitness">
+            <div class="catalog-items" id="fitness">
                 <div class="catalog-items__active">
                     <div class="catalog-item">
                         <div class="catalog-items__wrapper">
@@ -378,7 +378,7 @@
                 </div>
             </div>
 
-            <div class="catalog-items__show catalog-items__notshow" id="jogging">
+            <div class="catalog-items" id="jogging">
                 <div class="catalog-items__active">
                     <div class=" catalog-item">
                         <div class="catalog-items__wrapper">
@@ -534,7 +534,7 @@
                 </div>
             </div>
 
-            <div class="catalog-items__show catalog-items__notshow" id="triatlon">
+            <div class="catalog-items" id="triatlon">
                 <div class="catalog-items__active">
                     <div class="catalog-item">
                         <div class="catalog-items__wrapper">

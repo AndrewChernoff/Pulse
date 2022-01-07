@@ -74,30 +74,32 @@
         margin: 45px 0 57px 0;
     }
     &__tab {
-        background-color: $main_color;
         border: grey 1px solid;
         width: 223px;
         height: 52px;
         line-height: 50px;
         text-align: center;
         text-transform: uppercase;
-        color: white;
+        color: #6B6B6B;
         transform: skewX(-25deg);
         margin-right: 10px;
-
-        &__inactive {
+        div {
+            transform: skewX(25deg);
+        }
+        &__active {
+            background-color: $main_color;
             border: grey 1px solid;
             width: 223px;
             height: 52px;
             line-height: 50px;
             text-align: center;
             text-transform: uppercase;
-            color: #6B6B6B;
+            color: white;
             transform: skewX(-25deg);
             margin-right: 10px;
-            div {
-                transform: skewX(25deg);
-            }
+        div {
+            transform: skewX(25deg);
+        }
         }
         div{
             transform: skewX(25deg);
@@ -110,16 +112,13 @@
         }
     }
     &-items {
-        display: none;
+        display: block;
         &__active {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
-        &__show {
+        &__active {
             display: block;
-        }
-        &__notshow {
-            display: none;
         }
         }
     &__wrapper {
@@ -202,8 +201,4 @@
         &:hover {
             color: #C70101;
         }
-    }
-
-    .catalog-items__notshow {
-        display: none;
     }

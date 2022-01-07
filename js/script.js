@@ -58,21 +58,30 @@ document.addEventListener('DOMContentLoaded', function () {
         })
     })
 
-    function switchTab(evt, tabId) {
-        let i, catalogItems, catalogTab;
-        catalogItems = document.getElementsByClassName("catalog-items__show");
-        for (i = 0; i < catalogItems.length; i++) {
-            catalogItems[i].className = "catalog-items__notshow";
-            catalogTab = document.querySelectorAll(".catalog__tab");
+    let tabs = document.querySelectorAll('.catalog__tab');
+    let catalogItems = document.querySelectorAll('.catalog-items');
 
-            for (i = 0; i < catalogTab.length; i++) {
-                catalogTab[i].className = "catalog__tab__inactive";
-            }
-        }
-
-        document.getElementById(tabId).className = "catalog-items__show";
-        evt.currentTarget.className = "catalog__tab";
+    function hideCatalogItems() {
+        catalogItems.forEach(c => c.style.display = "none");
     }
+    function showCatalogItem(i = 0) {
+        catalogItems[i].style.display = "block";
+    }
+    console.log(catalogItems);
+    hideCatalogItems();
+    showCatalogItem(0);
+
+    tabs.forEach((tab, i) => {
+        tab.addEventListener('click', (e) => {
+            tabs.forEach((el) => {
+                el.parentNode.classList.remove("catalog__tab__active");
+                el.classList.remove("catalog__tab__active");
+            });
+            tabs[i].classList.add("catalog__tab__active");
+            hideCatalogItems();
+            showCatalogItem(i);
+        });
+    })
 
     /////Modal
     let consultation = document.querySelectorAll("[data-consultation]");
@@ -94,6 +103,7 @@ document.addEventListener('DOMContentLoaded', function () {
         consultMododal.style.display = 'none';
         document.body.style.overflow = '';
     }
+
     //consultation
     consultation.forEach(el => {
         el.addEventListener('click', function () {
@@ -197,7 +207,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     //Up
     const up = document.querySelector('.up');
-    //window.addEventListener('scroll', () => console.log(window.pageYOffset));
 
     window.addEventListener('scroll', () => {
         if (window.pageYOffset > 1000) {
@@ -207,6 +216,4 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
     });
-
-
 })
