@@ -34,5 +34,11 @@
         display: block;
         margin: 0 auto;
         max-width: 100%;
+        &__heart_animated {
+            //animation: heart  2s infinite ease-in-out;
+            animation-name: heart;
+            animation-duration: 1.5s;
+            animation-iteration-count: infinite;
+        }
     }
 }
